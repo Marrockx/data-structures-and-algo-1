@@ -67,4 +67,4 @@ root.right.right = new Node(8);
 root.left.left.left = new Node(6);
 root.left.left.right = new Node(7);
 
-document.write(TotalNodes(root));
+// document.write(TotalNodes(root));
