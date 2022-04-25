@@ -20,5 +20,6 @@ function convertToBinary(dec) {
         bin = bin + rem * i;
         i = i * 10;
     }
-    return bin
+
+    return bin;
 }
