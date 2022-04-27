@@ -1,3 +1,11 @@
+let btnFive = document.querySelector('.fifth-btn')
+
+btnFive.addEventListener('click', alertFive)
+
+function alertFive() {
+    alert(`The ascending order sorting of array - [9, -3, 5, 2, 6, 8, -6, 1, 3] - using quick sort is: ${quickSort([9, -3, 5, 2, 6, 8, -6, 1, 3])}`)
+}
+
 function quickSort(arr, left = 0, right = arr.length - 1) {
     if (left < right) {
 

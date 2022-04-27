@@ -1,3 +1,10 @@
+
+let btnTwo = document.querySelector('.second-btn')
+btnTwo.addEventListener('click', alertTwo)
+function alertTwo() {
+    alert(`The number that appears twice in the array is: ${duplicateElement([1, 2, 3, 4, 4])}`)
+}
+
 function duplicateElement(arr) {
     const obj = {};
     for (let char of arr) {

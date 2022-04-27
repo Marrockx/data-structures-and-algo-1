@@ -1,3 +1,13 @@
+let btnFour = document.querySelector('.fourth-btn')
+btnFour.addEventListener('click', alertFour)
+
+function alertFour() {
+    alert(`The binary numbers of the given decimal range include: ${oddBinNum(genBin(10))}`)
+
+}
+
+
+
 class Queue {
 
     constructor() {

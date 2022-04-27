@@ -1,3 +1,10 @@
+let btnOne = document.querySelector('.first-btn')
+btnOne.addEventListener('click', alertOne)
+
+function alertOne() {
+    alert(`The number of Balanced Nodes in the Binary Tree are: ${countNodes(tree.root)}`)
+}
+
 class Node {
     constructor(value) {
         this.data = value;

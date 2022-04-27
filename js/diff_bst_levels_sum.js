@@ -1,5 +1,15 @@
+let btnThree = document.querySelector('.third-btn')
+btnThree.addEventListener('click', alertThree)
+
+function alertThree() {
+    alert(`The difference between First and Last Two Levels of the tree is: ${diffLevelsSum()}`)
+
+}
+
+
+
 function diffLevelsSum() {
-    return sum1 - sum2;
+    return parseInt(sum1 - sum2);
 }
 
 
@@ -8,6 +18,7 @@ let sum2 = 0;
 
 function sumOfFirstTwoLevels(arr, n) {
     let sumFirst = [];
+
     for (let i = 0; i < n; i++) {
         sumFirst.push(arr[i]);
     }
@@ -22,7 +33,10 @@ function sumOfFirstTwoLevels(arr, n) {
 
 function sumOfLastTwoLevels(arr, n) {
     let sumSecond = [];
+
     for (let i = 2; i < n; i++) {
+        let sumSecond = [];
+
         sumSecond.push(arr[i]);
 
     }
@@ -65,8 +79,23 @@ function calcLevelSum(node, level, sum) {
 
 }
 
+class Node {
+    constructor(value) {
+        this.data = value;
+        this.left = null;
+        this.right = null;
+    }
+}
 
-var tree = new BST();
+class BST {
+    constructor() {
+        this.root = null;
+
+    }
+
+}
+
+var tree = new BST()
 
 tree.root = new Node(5);
 tree.root.left = new Node(4);
@@ -80,20 +109,23 @@ tree.root.left.left.right = new Node(6);
 tree.root.right.right.left = new Node(6);
 tree.root.right.right.right = new Node(9);
 
-
 let levels = getHeight(tree.root) + 1;
 
 let sumOfLevels = new Array(2);
 
 
-for (let i = 0; i < levels; i++) {
+for (let i = 0; i < 2; i++) {
     sumOfLevels[i] = 0;
 
 }
 
-calcLevelSum(tree.root, 0, sumOfLevels);
+calcLevelSum(tree.root, 0, sumOfLevels)
+
+
+
 
 
 sumOfFirstTwoLevels(sumOfLevels, 2);
 sumOfLastTwoLevels(sumOfLevels, levels);
 
+// document.write(diffLevelsSum)
